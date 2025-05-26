@@ -6,6 +6,13 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
 from tensorflow.keras.models import load_model
 
+import sys
+import platform
+
+print(f"Python version: {sys.version}")
+print(f"Platform: {platform.system()} {platform.release()} {platform.machine()}")
+
+
 #load the trained model
 model = load_model('model.h5')
 #load the scaler
