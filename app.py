@@ -53,7 +53,7 @@ input_data = pd.DataFrame({
     'EstimatedSalary': [estimated_salary]
 })
 
-geo_encoded = label_encoder_geo.transform([[geography]])
+geo_encoded = label_encoder_geo.transform([[geography]]).toarray()
 geo_encoded_df = pd.DataFrame(geo_encoded, columns=label_encoder_geo.get_feature_names_out(['Geography']))
 
 # Combine one-hot encoded columns with input data
